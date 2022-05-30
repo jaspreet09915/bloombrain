@@ -21,7 +21,7 @@ const Footer = () => {
             </span>CBSE Class 1
           </a>
           <a>
-            <span class="text-white mr-1 inline-flex items-center justify-center">
+            <span class="text-white mr-1 inline-flex   items-center justify-center">
             <GiWhiteBook/>
             </span>CBSE Class 2
           </a>
