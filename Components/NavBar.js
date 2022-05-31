@@ -58,7 +58,7 @@ const NavBar = () => {
         <div onMouseOver={toggleCart}  className='z-20 mx-3 mt-9 hover:bg-blue-300 cursor-pointer hover:border-blue-700 rounded p-2 align-middle my-auto'>
         Courses
         </div >
-        <ul ref={ref}  className="bg-white  hidden border-solid border-2 absolute z-30 border-blue-200 hover:border-blue-600 rounded-3xl ">
+        <ul ref={ref}  className="bg-white   border-solid border-2 absolute z-30 border-blue-200 hover:border-blue-600 rounded-3xl ">
           <li className='border-b-2 border-solid border-gray-300 hover:bg-blue-500 rounded-tr-3xl rounded-tl-3xl pt-2 px-1'><Link href={'/academic'}>Academics</Link></li>
           <li className='border-b-2 border-solid border-gray-300 hover:bg-blue-500  pt-2 px-1'><Link href={'/codding_for_kids'}>Codding for Kids</Link></li>
           <li className='border-b-2 border-solid border-gray-300 hover:bg-blue-500  pt-2 px-1'><Link href={'/english_speaking_for_kids'}>English Speaking for kids</Link></li>
@@ -73,7 +73,7 @@ const NavBar = () => {
          
       </div>
       <div className='ml-52 flex'>
-         <div className='align-middle my-auto cursor-pointer  backdrop-blur-sm bg-blue-700 p-3 rounded-2xl hover:bg-blue-300'>
+         <div className='align-middle my-auto cursor-pointer hover:border-2 hover:border-blue-600  backdrop-blur-sm bg-blue-700 p-3 rounded-2xl h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500 '>
            <a href='/demo'>
         Book Free Demo Class
            </a>

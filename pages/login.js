@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../Components/Footer'
 import NavBar from '../Components/NavBar'
 import Image from 'next/image'
+import Link from 'next/link'
 const login = () => {
   return (
     <div>
@@ -64,7 +65,7 @@ const login = () => {
               <a
                 href="#!"
                 class="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
-                >Register</a
+                ><Link href={'/register'}>Register</Link></a
               >
             </p>
           </div>

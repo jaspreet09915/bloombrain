@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from "../Components/Footer";
 import NavBar from "../Components/NavBar";
-import style from '../styles/academicCss.css'
 const academic = () => {
   return (
     <>

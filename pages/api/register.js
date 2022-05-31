@@ -1,3 +1,16 @@
-export default function handler(req, res) {
- res.status(200).json({ Register: 'Register' })
+import Register from "../../models/Register";
+import connectDb from "../../middleware/mongoose";
+
+const handler = async (req , res)=>{
+ if(req.method =='POST'){ 
+    console.log(req.body);
+    let u = new Register(req.body)
+    await u.save();
+   res.status(200).json({success:"success"})
+ }
+ else{
+  res.status(400).json({error:"this method is not allowed"})
+ }
 }
+
+export default connectDb(handler)
