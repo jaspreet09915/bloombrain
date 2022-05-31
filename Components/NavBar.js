@@ -9,16 +9,11 @@ const NavBar = () => {
   // const ref = useRef();
   const ref = useRef();
   const toggleCart = (event) => {
-
-   console.log('clicked');
-  console.log(ref);
-  console.log(ref.current.classList)
-  console.log(ref.current.classList.add('hidden'))
   if (ref.current.classList.contains("hidden")) {
     ref.current.classList.remove("hidden");
-    ref.current.classList.add("block");
+    ref.current.classList.add("absolute");
   } else if (!ref.current.classList.contains("hidden")) {
-    ref.current.classList.remove("block");
+    ref.current.classList.remove("absolute");
     ref.current.classList.add("hidden");
   }
   };
@@ -34,12 +29,14 @@ const NavBar = () => {
       <div  className=' flex flex-row  rounded-2xl h-28 text-black'>
       <div className='mr-12 ml-24 flex '>
          
-        <div className='  my-auto cursor-pointer'>  <Image
+        <div className='  my-auto cursor-pointer'>
+        <a href='/' ><img
+            className='mt-7'
             src="/Bloom-logo-new.png"
             alt="Picture of the author"
             width={120}
             height={80}
-            /><Link href='/' className=' top-28 m-9 hidden'> a</Link></div>
+            /> </a></div>
          
       </div>
       <div className='flex ml-28 mr-14'>
@@ -55,10 +52,10 @@ const NavBar = () => {
 </div>
         <div className="1st">
 
-        <div onMouseOver={toggleCart}  className='z-20 mx-3 mt-9 hover:bg-blue-300 cursor-pointer hover:border-blue-700 rounded p-2 align-middle my-auto'>
+        <div onClick={toggleCart}  className='z-20 mx-3 mt-9 hover:bg-blue-300 cursor-pointer hover:border-blue-700 rounded p-2 align-middle my-auto'>
         Courses
         </div >
-        <ul ref={ref}  className="bg-white   border-solid border-2 absolute z-30 border-blue-200 hover:border-blue-600 rounded-3xl ">
+        <ul ref={ref}  className="bg-white  border-solid border-2 hidden z-30 border-blue-200 hover:border-blue-600 rounded-3xl ">
           <li className='border-b-2 border-solid border-gray-300 hover:bg-blue-500 rounded-tr-3xl rounded-tl-3xl pt-2 px-1'><Link href={'/academic'}>Academics</Link></li>
           <li className='border-b-2 border-solid border-gray-300 hover:bg-blue-500  pt-2 px-1'><Link href={'/codding_for_kids'}>Codding for Kids</Link></li>
           <li className='border-b-2 border-solid border-gray-300 hover:bg-blue-500  pt-2 px-1'><Link href={'/english_speaking_for_kids'}>English Speaking for kids</Link></li>

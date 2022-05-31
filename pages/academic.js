@@ -8,7 +8,7 @@ const academic = () => {
       <div className="">
       <div className="1st">
         <div className="1.1 flex flex-row space-x-7 justify-center ">
-          <div className={style.bgImg}>
+          <div className=''>
           <div className="1.a flex justify-center order-last bg-purple-500 m-2 w-1/3 h-64">
             <div className="w-1/2 h-48 bg-purple-400">
             <div  className="blog-desc"  >

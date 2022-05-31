@@ -3,6 +3,7 @@ import Footer from '../Components/Footer'
 import NavBar from '../Components/NavBar'
 import Image from 'next/image'
 import { useState } from 'react';
+import Router from 'next/router';
 const register = () => {
     const [fname, setFname] = useState();
     const [lname, setLname] = useState();
@@ -60,6 +61,7 @@ const register = () => {
                 'Content-Type': 'application/json'
             },
         });
+        Router.push('http://localhost:3000/login')
         let response = await res.json()
         console.log(response)
         setFname('')
